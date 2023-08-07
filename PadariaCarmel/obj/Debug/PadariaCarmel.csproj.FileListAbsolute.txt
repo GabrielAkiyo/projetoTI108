@@ -22,3 +22,5 @@ C:\Users\gabriel.armatussita\Documents\Visual Studio 2019\ProjetoTI108\EmpresaAB
 C:\Users\gabriel.armatussita\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\Debug\PadariaCarmel.csproj.CoreCompileInputs.cache
 C:\Users\gabriel.armatussita\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\Debug\PadariaCarmel.exe
 C:\Users\gabriel.armatussita\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\Debug\PadariaCarmel.pdb
+C:\Users\gabriel.armatussita\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmMenuPrincipal.resources
+C:\Users\gabriel.armatussita\Documents\Visual Studio 2019\ProjetoTI108\EmpresaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmFuncionario.resources
