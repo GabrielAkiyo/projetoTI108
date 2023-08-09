@@ -90,7 +90,7 @@ namespace PadariaCarmel
             btnNovo.Enabled = false;
 
             txtNome.Focus();
-        } 
+        }
         public void limparCampos()
         {
             txtCodigo.Enabled = false;
@@ -107,7 +107,7 @@ namespace PadariaCarmel
 
             cbbEstado.Text = "";
 
-           txtNome.Focus();
+            txtNome.Focus();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -134,6 +134,42 @@ namespace PadariaCarmel
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             limparCampos();
+        }
+
+        public void buscaCEP(string numCEP)
+        {
+            WSCorreios.AtendeClienteClient ws = new WSCorreios.AtendeClienteClient();
+            try
+            {
+                WSCorreios.enderecoERP endereco = ws.consultaCEP(numCEP);
+
+                txtEndereco.Text = endereco.end;
+                txtBairro.Text = endereco.bairro;
+                txtCidade.Text = endereco.cidade;
+                cbbEstado.Text = endereco.uf;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Inserir CEP válido!!!", "Mensagem do sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                mskCEP.Focus();
+                mskCEP.Text = "";
+            }
+        }
+
+        private void mskCEP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buscaCEP(mskCEP.Text);
+                txtNumero.Focus();
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
+            abrir.ShowDialog();
         }
     }
 }
