@@ -26,6 +26,11 @@ namespace PadariaCarmel
         {
             InitializeComponent();
         }
+        public frmFuncionario(string nome)
+        {
+            InitializeComponent();
+            txtNome.Text = nome;
+        }
 
         private void frmFuncionario_Load(object sender, EventArgs e)
         {
